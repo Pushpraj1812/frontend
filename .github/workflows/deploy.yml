@@ -23,9 +23,9 @@ jobs:
 
 
                       # BACKEND DEPLOYMENT
-                      cd /home/ubuntu/backend
+                      cd /home/ubuntu/frontend
                       git pull origin main
-                      sudo docker stop backend || true
-                      sudo docker rm backend || true
-                      sudo docker build -t backend:latest .
-                      sudo docker run -d --name backend -p 5001:5001 backend:latest
+                      sudo docker stop frontend || true
+                      sudo docker rm frontend || true
+                      sudo docker build -t frontend:latest .
+                      sudo docker run -d --name frontend -p 5001:5001 frontend:latest
